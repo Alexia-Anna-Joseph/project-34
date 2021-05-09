@@ -4,15 +4,15 @@ const World=  Matter.World;
  const Bodies=  Matter.Bodies;
  const Constraint= Matter.Constraint;
 
- var backgroundImg;
+
 
 function preload() {
  
-  backgroundImg = loadImage("GamingBackground.png"); 
+  
 }
 
 function setup() {
-  createCanvas(1200, 600);
+  createCanvas(1300, 660);
   engine = Engine.create();
   world = engine.world;
   superman1=new superman(200,600,30,30);
@@ -49,7 +49,10 @@ function setup() {
 }
 
 function draw() {
-  background(backgroundImg);
+  background("pink");
+  textSize(35)
+  text("Click on the superman to free him",100,100);
+  fill("white");
   Engine.update(engine);
 
   superman1.display();
